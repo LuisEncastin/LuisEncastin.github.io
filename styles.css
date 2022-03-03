@@ -1,0 +1,207 @@
+/* fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700;900&display=swap'); 
+/*
+1.- Posicionamiento.
+2.- Modelo de caja (Box model).
+3.- Tipografía.
+4.- Visuales
+5.- Otros.
+*/
+:root {
+    /* Colores */
+        --green-strong: #93AA0B;
+        --light-green: #b2cd48;
+        --black: #050F09;
+        --gray: #333333;
+        --just-white: #fff;
+    }
+/* General */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    font-size: 62.5%;
+    text-align: center;
+    font-family: montserrat;
+}
+.section{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+}
+a {
+    color: #000;
+  }
+/* Estilos */
+
+/* Principal */
+
+#principal{
+    background-image: url("https://imagizer.imageshack.com/v2/xq90/922/YRCBuK.jpg");
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: cover;
+}
+#principalLayer{
+    height: auto;
+    width: 100%;
+    max-width: 1349px;
+    background-color: rgba(0, 0, 0,75%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 0;
+}
+.principalContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: auto;
+    height: 35rem;
+    margin: 9rem auto 7rem;
+}
+.principalContainer--img{
+    height: 200px;
+    width: 200px;
+    border-radius: 51%;
+    background-image: url("https://imagizer.imageshack.com/v2/xq90/922/AVG1cq.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.principalContainer--body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.principalContainer--title, .principalContainer--description {
+    font-weight: 200;
+    font-size: 2.5rem;
+    color: var(--just-white);
+}
+.principalContainer--title strong {
+    font-weight: 700;
+    color: var(--green-strong);
+}
+
+.animated{
+    -webkit-animation-duration: 3s;
+            animation-duration: 3s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+@-webkit-keyframes fadeInLeft {
+    0% {
+       opacity: 0;
+       -webkit-transform: translateX(-20px);
+    }
+    100% {
+       opacity: 1;
+       -webkit-transform: translateX(0);
+    }
+ }
+ 
+ @keyframes fadeInLeft {
+    0% {
+       opacity: 0;
+       transform: translateX(-20px);
+    }
+    100% {
+       opacity: 1;
+       transform: translateX(0);
+    }
+ }
+ 
+ .fadeInLeft {
+ -webkit-animation-name: fadeInLeft;
+ animation-name: fadeInLeft;
+ } 
+
+
+@media (min-width: 760px){
+    .principalContainer--img{
+        height: 250px;
+        width: 250px;
+        margin: 0 auto;
+    }
+    .principalContainer{
+        width: 70rem;
+        height: auto;
+
+        display: flex;
+        flex-direction: row;
+    }
+    .principalContainer--title, .principalContainer--description {
+        font-size: 4rem;
+    }
+    #principalLayer{
+        height: 100vh;
+        width: 100vw;
+    }    
+}
+
+@media (min-width: 1200px){
+    .section{
+        min-height: 100vh;
+    }
+    #principalLayer{
+        height: 100vh;
+        width: 100%;
+        max-width: 1349px;
+    }    
+    .principalContainer--img{
+        height: 300px;
+        width: 300px;
+    }
+    .principalContainer{
+        width: 130rem;
+        height: auto;
+    }
+    .principalContainer--title, .principalContainer--description {
+        font-size: 7rem;
+    }
+}
+
+#resume {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#resume p {
+    font-weight: 200;
+    font-size: 2.5rem;
+    color: var(--just-white);
+}
+
+.resume--button {
+    margin-top: 10px;
+    height: 40px;
+    width: 120px;
+    border-radius: 20px;
+    background-color: var(--green-strong);
+    border: none;
+    outline: none;
+    color: var(--just-white);
+    font-size: 1.7rem;
+    font-weight: 700;
+    transition: all 0.3s ease-in-out 0s ;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+}
+.resume--button:hover{
+    transform: scale(1.1); 
+}
